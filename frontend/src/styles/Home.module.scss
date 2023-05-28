@@ -1,0 +1,355 @@
+@mixin title {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  text-align: center;
+
+  color: #ffffff;
+
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+@mixin under {
+  background: linear-gradient(90deg, #fc923b 0%, #f45d34 100%);
+}
+
+@media (min-width: 1024px) {
+  .h1 {
+    width: 100vw;
+    height: 83px;
+
+    font-family: "Noto Sans JP";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 93px;
+    text-align: center;
+
+    background: linear-gradient(97.36deg, #fc923b 0%, #f45d34 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    text-decoration: underline;
+    border-bottom: 2px solid linear-gradient(97.36deg, #fc923b 0%, #f45d34 100%);
+  }
+  .h1Under {
+    height: 5px;
+    width: 60vw;
+    margin: 0 auto;
+    @include under;
+  }
+  .h2 {
+    font-family: "Noto Sans JP";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 93px;
+    /* ボックスの高さと同一 */
+    text-align: center;
+
+    background: linear-gradient(97.36deg, #fc923b 0%, #f45d34 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  .h3 {
+    font-family: "Noto Sans JP";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 70px;
+    /* ボックスの高さと同一 */
+    text-align: center;
+
+    color: #000000;
+  }
+  .h4 {
+    font-family: "Noto Sans JP";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 35px;
+    text-align: center;
+
+    color: #000000;
+  }
+  .roadmapLine {
+    height: 5px;
+    width: 90vw;
+    margin: 50px auto;
+    @include under;
+  }
+  .socialArea {
+    width: 80vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+  .nowPeople {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: auto;
+  }
+  .bigText {
+    font-family: "Noto Sans JP";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 128px;
+    line-height: 185px;
+    text-align: center;
+  }
+  .orangeFlex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  .orangeColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+  .orangeArea {
+    width: 330px;
+    height: 97px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(91.41deg, #fc923b 0%, #f45d34 100%);
+    box-shadow: 0px 3px 8px 2px rgba(0, 0, 0, 0.25);
+
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+
+    color: #ffffff;
+  }
+  .orangeAreaText {
+    width: 192px;
+    height: 140px;
+
+    font-family: "Noto Sans JP";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 70px;
+    text-align: center;
+
+    color: #000000;
+  }
+  .switchButtonArea {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 100px;
+  }
+  .switchButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 284px;
+    height: 68px;
+
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+
+    color: #ffffff;
+
+    background: linear-gradient(91.41deg, #fc923b 0%, #f45d34 100%);
+    box-shadow: 0px 3px 8px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+  }
+  .charaFlexArea {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width:100vw;
+    margin-top: 100px;
+  }
+  .charaArea {
+    
+    width: 388px;
+    height: 336.27px;
+    background: #ffffff;
+    box-shadow: 0px 2px 1px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    .TopArea{
+      display: flex;
+      justify-content: center;
+      gap:3vw;
+      margin-top: 30px;
+      .iconArea{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 166.96px;
+        height: 166.96px;
+        background: #FFFFFF;
+        box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.25);
+        border-radius: 50px;
+      }
+      .TopRightArea{
+        .GenderAge{
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+        }
+        .personality{
+          width:130px;
+          font-family: 'Inter';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 24px;
+          text-align: center;
+          color: #000000;
+        }
+      }
+    }
+    .bottomArea{
+      margin-top:20px;
+      margin-left:30px;
+      display: flex;
+      flex-direction: column;
+      gap:5px;
+      .charaMainText{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 39px;
+        color: #000000;
+        margin:0px;
+      }
+      .charaText{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        color: #000000;
+      }
+    }
+  }
+
+
+  .bgimg {
+    width: 100vw;
+    height: 100vh;
+  }
+  .title {
+    position: absolute;
+    width: 554px;
+    height: 154px;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, -50%);
+  }
+  .subTitle1 {
+    position: absolute;
+    width: 760px;
+    height: 48px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    @include title;
+  }
+  .subTitle2 {
+    position: absolute;
+    height: 48px;
+    width: 900px;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+
+    @include title;
+  }
+  .waitingButtonWhite {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 247px;
+    height: 69px;
+    left: 50%;
+    top: 85%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+
+    background: #ffffff;
+    box-shadow: 0px 3px 8px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+  }
+  .buttonArea {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+  .waitingButtonColor {
+    width: 306px;
+    height: 68px;
+    background: linear-gradient(91.41deg, #fc923b 0%, #f45d34 100%);
+    box-shadow: 0px 3px 8px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+    border: none;
+    margin: 0 auto;
+
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+
+    color: #ffffff;
+  }
+  .waitingText {
+    width: 128px;
+    height: 46px;
+
+    font-family: "Noto Sans JP";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 46px;
+    text-align: center;
+
+    background: linear-gradient(97.36deg, #fc923b 0%, #f45d34 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .bgColor {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+    background: linear-gradient(
+      180deg,
+      rgba(252, 146, 59, 0.7) 0%,
+      rgba(244, 93, 52, 0.7) 97.8%
+    );
+    border-radius: 0px;
+  }
+}
