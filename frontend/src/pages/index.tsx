@@ -84,11 +84,12 @@ export default function Home() {
       <div className={styles.buttonArea}>
         <button className={styles.waitingButtonColor} onClick={()=>location.href="registration"}>事前登録</button>
       </div>
-      <h2 className={styles.h2}>事前登録人数</h2>
+      <div className={styles.h2}>事前登録人数</div>
       <div className={styles.nowPeople}>
         <h2 className={styles.h2}>現在</h2>
-        <h2 className={`${styles.h2} ${styles.bigText}`}>333人</h2>
+        <div className={`${styles.h2} ${styles.bigText}`}>333人</div>
       </div>
+      <div className={styles.orangeBorder} >
       <div className={styles.orangeFlex}>
         <div className={styles.orangeColumn}>
           <div className={styles.orangeArea}>登録者10人</div>
@@ -123,6 +124,7 @@ export default function Home() {
           <div className={styles.orangeAreaText}>トークン◯個追加</div>
         </div>
       </div>
+      </div>
 
       <div className={styles.buttonArea}>
         <button className={styles.waitingButtonColor} onClick={()=>location.href="registration"}>事前登録</button>
@@ -136,13 +138,13 @@ export default function Home() {
         追加で報酬を獲得！
         <br />
         <br />
-        <a href="https://twitter.com/ai_talk_app" target="_blank">
+        <a className={styles.link} href="https://twitter.com/ai_talk_app" target="_blank">
           対象ツイートはこちら！
         </a>
       </h3>
-      <h2 className={styles.h2}>いいね</h2>
-      <h2 className={`${styles.h2} ${styles.bigText}`}>1000</h2>
-
+      <div className={styles.h2}>いいね</div>
+      <div className={`${styles.h2} ${styles.bigText}`}>1000</div>
+      <div className={styles.orangeBorder} >
       <div className={styles.orangeFlex}>
         <div className={styles.orangeColumn}>
           <div className={styles.orangeArea}>いいね100</div>
@@ -177,9 +179,11 @@ export default function Home() {
           <div className={styles.orangeAreaText}>トークン◯個追加</div>
         </div>
       </div>
+      </div>
 
       <h2 className={styles.h2}>リツイート</h2>
       <h2 className={`${styles.h2} ${styles.bigText}`}>1000</h2>
+      <div className={styles.orangeBorder} >
       <div className={styles.orangeFlex}>
         <div className={styles.orangeColumn}>
           <div className={styles.orangeArea}>リツイート100</div>
@@ -213,6 +217,7 @@ export default function Home() {
           <div className={styles.orangeArea}>リツイート10000</div>
           <div className={styles.orangeAreaText}>トークン◯個追加</div>
         </div>
+      </div>
       </div>
 
       <div className={styles.buttonArea}>
@@ -328,39 +333,95 @@ export default function Home() {
       </div>
 
       <h1 className={styles.h1}>ロードマップ</h1>
-      <div className={styles.h1Under} />
+      <div className={`${styles.h1Under} ${styles.roadmapUnder}`} />
 
-      <h2 className={styles.h2}>06/01</h2>
-      <h2 className={styles.h2}>AVATALK事前登録開始</h2>
-      <div className={styles.roadmapLine} />
+      <div className={styles.roadmapTextBlack}>06/01</div>
+      <div className={styles.roadmapTextBlack}>AVATALK事前登録開始</div>
+      <div className={styles.roadmapLine} >
+        <Image
+          src="/arrow.svg"
+          width={50}
+          height={50}
+          alt="矢印"
+          className={styles.arrow}
+        />
+      </div>
 
-      <h2 className={styles.h2}>06/15</h2>
-      <h2 className={styles.h2}>オリジナルキャラクター案募集開始</h2>
-      <div className={styles.roadmapLine} />
+      <div className={styles.roadmapTextBlack}>06/15</div>
+      <div className={styles.roadmapTextBlack}>オリジナルキャラクター案募集開始</div>
+      <div className={styles.roadmapLine} >
+        <Image
+          src="/arrow.svg"
+          width={50}
+          height={50}
+          alt="矢印"
+          className={styles.arrow}
+        />
+      </div>
 
-      <h2 className={styles.h2}>08/01</h2>
-      <h2 className={styles.h2}>プレリリース</h2>
-      <div className={styles.roadmapLine} />
+      <div className={styles.roadmapTextBlack}>08/01</div>
+      <div className={styles.roadmapTextBlack}>プレリリース</div>
+      <div className={styles.roadmapLine} >
+        <Image
+          src="/arrow.svg"
+          width={50}
+          height={50}
+          alt="矢印"
+          className={styles.arrow}
+        />
+      </div>
 
-      <h2 className={styles.h2}>将来</h2>
-      <h2 className={styles.h2}>
+      <div className={styles.roadmapTextBlack}>将来</div>
+      <div className={styles.roadmapTextBlack}>
         YoutubeでAItuberとしてオリジナルキャラクターが活動開始
-      </h2>
-      <div className={styles.roadmapLine} />
+      </div>
+      <div className={styles.roadmapLine} >
+        <Image
+          src="/arrow.svg"
+          width={50}
+          height={50}
+          alt="矢印"
+          className={styles.arrow}
+        />
+      </div>
 
-      <h2 className={styles.h2}>将来</h2>
-      <h2 className={styles.h2}>キャラボイスの音声合成に声優を採用</h2>
-      <div className={styles.roadmapLine} />
+      <div className={styles.roadmapTextBlack}>将来</div>
+      <div className={styles.roadmapTextBlack}>キャラボイスの音声合成に声優を採用</div>
+      <div className={styles.roadmapLine} >
+        <Image
+          src="/arrow.svg"
+          width={50}
+          height={50}
+          alt="矢印"
+          className={styles.arrow}
+        />
+      </div>
 
-      <h2 className={styles.h2}>将来</h2>
-      <h2 className={styles.h2}>キャラボイスの音声合成にVtuberを採用</h2>
-      <div className={styles.roadmapLine} />
+      <div className={styles.roadmapTextBlack}>将来</div>
+      <div className={styles.roadmapTextBlack}>キャラボイスの音声合成にVtuberを採用</div>
+      <div className={styles.roadmapLine} >
+        <Image
+          src="/arrow.svg"
+          width={50}
+          height={50}
+          alt="矢印"
+          className={styles.arrow}
+        />
+      </div>
 
-      <h2 className={styles.h2}>将来</h2>
-      <h2 className={styles.h2}>
+      <div className={styles.roadmapTextBlack}>将来</div>
+      <div className={styles.roadmapTextBlack}>
         Youtubeでユーザーの意見を取り入れながら行う開発ライブ配信
-      </h2>
-      <div className={styles.roadmapLine} />
+      </div>
+      <div className={styles.roadmapLine} >
+        <Image
+          src="/arrow.svg"
+          width={50}
+          height={50}
+          alt="矢印"
+          className={styles.arrow}
+        />
+      </div>
 
       <div className={styles.buttonArea}>
         <button className={styles.waitingButtonColor} onClick={()=>location.href="registration"}>事前登録</button>

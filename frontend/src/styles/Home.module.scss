@@ -1,4 +1,7 @@
-@mixin title {
+
+
+@media (min-width: 1024px) {
+  @mixin title {
   font-family: "Inter";
   font-style: normal;
   font-weight: 700;
@@ -13,8 +16,6 @@
 @mixin under {
   background: linear-gradient(90deg, #fc923b 0%, #f45d34 100%);
 }
-
-@media (min-width: 1024px) {
   .h1 {
     width: 100vw;
     height: 83px;
@@ -44,7 +45,7 @@
     font-family: "Noto Sans JP";
     font-style: normal;
     font-weight: 700;
-    font-size: 64px;
+    font-size: 58px;
     line-height: 93px;
     /* ボックスの高さと同一 */
     text-align: center;
@@ -76,14 +77,63 @@
 
     color: #000000;
   }
+  .link{
+    font-family: "Noto Sans JP";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 35px;
+    text-align: center;
+    background: linear-gradient(97.36deg, #00c8ff 0%, #347af4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  .roadmapText{
+    font-family: "Noto Sans JP";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 93px;
+    height:60px;
+    /* ボックスの高さと同一 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(97.36deg, #fc923b 0%, #f45d34 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+
+  .roadmapTextBlack{
+    font-family: "Noto Sans JP";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 93px;
+    height:60px;
+    /* ボックスの高さと同一 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:rgb(61, 61, 61);
+  }
+
   .roadmapLine {
-    height: 5px;
-    width: 90vw;
-    margin: 50px auto;
-    @include under;
+    height: 50px;
+    width: 100vw;
+    margin: 5px auto;
+    text-align: center;
+  }
+  .roadmapUnder{
+    margin-bottom:10vh;
   }
   .socialArea {
-    width: 80vw;
+    width: 60vw;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -102,13 +152,26 @@
     font-family: "Noto Sans JP";
     font-style: normal;
     font-weight: 700;
-    font-size: 128px;
+    font-size: 100px;
     line-height: 185px;
     text-align: center;
+    margin-bottom:3vh;
+  }
+  .orangeBorder{
+    
+    border: 5px solid #fc923b;
+    border-radius:30px;
+    width:80vw;
+    margin: auto;
+    padding-top:50px;
+    box-sizing: border-box;
+
   }
   .orangeFlex {
     display: flex;
     justify-content: space-around;
+    width:80vw;
+    margin: auto;
     align-items: center;
     margin-bottom: 50px;
   }
@@ -116,10 +179,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 50px;
+    gap: 3vh;
   }
   .orangeArea {
-    width: 330px;
+    width: 20vw;
     height: 97px;
 
     display: flex;
@@ -132,7 +195,7 @@
     font-family: "Inter";
     font-style: normal;
     font-weight: 700;
-    font-size: 40px;
+    font-size: 35px;
     line-height: 48px;
     text-align: center;
 
@@ -145,7 +208,7 @@
     font-family: "Noto Sans JP";
     font-style: normal;
     font-weight: 700;
-    font-size: 48px;
+    font-size: 28px;
     line-height: 70px;
     text-align: center;
 
