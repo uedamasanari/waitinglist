@@ -52,7 +52,7 @@ export default function Home() {
         AIオリジナルキャラと話したい世界へ飛び込もう
       </p>
       <div className={styles.waitingButtonWhite}>
-        <p className={styles.waitingText}>事前登録</p>
+        <p className={styles.waitingText} onClick={()=>location.href="registration"}>事前登録</p>
       </div>
       <Image
         src="/bgimg.svg"
@@ -82,7 +82,7 @@ export default function Home() {
         追加で報酬を獲得！
       </h3>
       <div className={styles.buttonArea}>
-        <button className={styles.waitingButtonColor}>事前登録</button>
+        <button className={styles.waitingButtonColor} onClick={()=>location.href="registration"}>事前登録</button>
       </div>
       <h2 className={styles.h2}>事前登録人数</h2>
       <div className={styles.nowPeople}>
@@ -125,7 +125,7 @@ export default function Home() {
       </div>
 
       <div className={styles.buttonArea}>
-        <button className={styles.waitingButtonColor}>事前登録</button>
+        <button className={styles.waitingButtonColor} onClick={()=>location.href="registration"}>事前登録</button>
       </div>
 
       <h1 className={styles.h1}>いいね・リツイートキャンペーン</h1>
@@ -216,7 +216,7 @@ export default function Home() {
       </div>
 
       <div className={styles.buttonArea}>
-        <button className={styles.waitingButtonColor}>事前登録</button>
+        <button className={styles.waitingButtonColor} onClick={()=>location.href="registration"}>事前登録</button>
       </div>
 
       <h1 className={styles.h1}>AVATALKとは</h1>
@@ -324,7 +324,7 @@ export default function Home() {
       )}
 
       <div className={styles.buttonArea}>
-        <button className={styles.waitingButtonColor}>事前登録</button>
+        <button className={styles.waitingButtonColor} onClick={()=>location.href="registration"}>事前登録</button>
       </div>
 
       <h1 className={styles.h1}>ロードマップ</h1>
@@ -363,7 +363,7 @@ export default function Home() {
       <div className={styles.roadmapLine} />
 
       <div className={styles.buttonArea}>
-        <button className={styles.waitingButtonColor}>事前登録</button>
+        <button className={styles.waitingButtonColor} onClick={()=>location.href="registration"}>事前登録</button>
       </div>
 
       <h1 className={styles.h1}>ソーシャル</h1>
