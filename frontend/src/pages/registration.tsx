@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import Image from "next/image";
 import axios from "axios";
 import swal from "sweetalert";
@@ -15,6 +15,21 @@ const Registration = () => {
     waiting_mail: "",
     waiting_text: "",
   });
+  const [windowWidth, setWindowWidth] = useState(0);
+
+  useEffect(() => {
+    setWindowWidth(window.innerWidth);
+
+    function handleResize() {
+      setWindowWidth(window.innerWidth);
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   const insertData = () => {
     if (validateEmail(data.waiting_mail)) {
       axios
@@ -81,13 +96,23 @@ const Registration = () => {
           事前登録
         </p>
       </div>
-      <Image
-        src="/bgimg.svg"
-        alt="bgimg"
-        width={200}
-        height={200}
-        className={styles.bgimg}
-      />
+      {windowWidth > 768 ? (
+        <Image
+          src="/pcbgimg.svg"
+          alt="bgimg"
+          width={200}
+          height={200}
+          className={styles.bgimg}
+        />
+      ) : (
+        <Image
+          src="/phonebgimg.svg"
+          alt="bgimg"
+          width={200}
+          height={200}
+          className={styles.bgimg}
+        />
+      )}
     </>
   );
 };
