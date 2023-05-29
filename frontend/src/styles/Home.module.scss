@@ -1,5 +1,481 @@
 
 
+@media (max-width: 1023px) {
+  @mixin title {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 48px;
+  text-align: center;
+
+  color: #ffffff;
+
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+@mixin under {
+  background: linear-gradient(90deg, #fc923b 0%, #f45d34 100%);
+}
+  .h1 {
+    width: 100vw;
+    height: 83px;
+
+    font-family: "Noto Sans JP";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 93px;
+    text-align: center;
+
+    background: linear-gradient(97.36deg, #fc923b 0%, #f45d34 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    text-decoration: underline;
+    border-bottom: 2px solid linear-gradient(97.36deg, #fc923b 0%, #f45d34 100%);
+  }
+  .h1Under {
+    height: 5px;
+    width: 80vw;
+    margin: 0 auto;
+    @include under;
+  }
+  .h2 {
+    font-family: "Noto Sans JP";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 43px;
+    /* ボックスの高さと同一 */
+    text-align: center;
+
+    background: linear-gradient(97.36deg, #fc923b 0%, #f45d34 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  .h3 {
+    font-family: "Noto Sans JP";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    /* ボックスの高さと同一 */
+    text-align: center;
+
+    color: #000000;
+  }
+  .h4 {
+    font-family: "Noto Sans JP";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+    width:90vw;
+    margin:auto;
+    margin-top:3vh;
+
+    color: #000000;
+  }
+  .link{
+    font-family: "Noto Sans JP";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 15px;
+    text-align: center;
+    background: linear-gradient(97.36deg, #00c8ff 0%, #347af4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  .arrowArea{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left:25vw;
+  }
+  .roadmapTextDate{
+    position:absolute;
+    z-index:2;
+    font-family: "Noto Sans JP";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 93px;
+    height:60px;
+    /* ボックスの高さと同一 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+  }
+
+  .roadmapTextBlack{
+    width:40vw;
+    position:absolute;
+    left:70%;
+    transform: translate(-50%, -50%);
+    font-family: "Noto Sans JP";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    height:60px;
+    /* ボックスの高さと同一 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:rgb(61, 61, 61);
+    text-align: center;
+  }
+  .arrow{
+    position: absolute;
+    width:40vw;
+  }
+
+  .roadmapArea {
+    height: 50px;
+    width: 100vw;
+    display: flex;
+    margin-top:20vh;
+  }
+  .roadmapUnder{
+    margin-bottom:10vh;
+  }
+  .roadmapLine{
+    position:absolute;
+    margin-top:55px;
+    left:50%;
+    transform: translate(-50%, -50%);
+width: 60vw;
+height: 5px;
+background: linear-gradient(90deg, #FC923B 0%, #F45D34 100%);
+
+  }
+  .socialArea {
+    width: 80vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+  .socialIcon{
+    width:50px;
+    height:50px;
+  }
+  .nowPeople {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: auto;
+  }
+  .bigText {
+    font-family: "Noto Sans JP";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 95px;
+    text-align: center;
+    margin-bottom:3vh;
+  }
+  .orangeBorder{
+    border: 5px solid #fc923b;
+    border-radius:30px;
+    width:83vw;
+    margin: auto;
+    padding-top:50px;
+    box-sizing: border-box;
+
+  }
+  .orangeFlex {
+    display: flex;
+    justify-content: space-around;
+    width:80vw;
+    margin: auto;
+    align-items: center;
+    margin-bottom: 0px;
+  }
+  .orangeColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3vh;
+  }
+  .orangeArea {
+    width: 20vw;
+    height: 77px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(91.41deg, #fc923b 0%, #f45d34 100%);
+    box-shadow: 0px 3px 8px 2px rgba(0, 0, 0, 0.25);
+
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+
+    color: #ffffff;
+  }
+  .orangeAreaText {
+    width: 20vw;
+    height: 100px;
+
+    font-family: "Noto Sans JP";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+
+    color: #000000;
+  }
+  .switchButtonArea {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 100px;
+  }
+  .switchButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25vw;
+    height: 5vh;
+
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 39px;
+    text-align: center;
+
+    color: #ffffff;
+
+    background: linear-gradient(91.41deg, #fc923b 0%, #f45d34 100%);
+    box-shadow: 0px 3px 8px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+  }
+  .charaFlexArea {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width:100vw;
+    
+  }
+  .charaArea {
+    
+    width: 45vw;
+    height: 45vw;
+    background: #ffffff;
+    box-shadow: 0px 2px 1px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    margin-top: 30px;
+    .TopArea{
+      display: flex;
+      justify-content: center;
+      gap:3vw;
+      margin-top: 10px;
+      .iconArea{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20vw;
+        height: 20vw;
+        background: #FFFFFF;
+        box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.25);
+        border-radius: 20px;
+        .charaIcon{
+          width: 13vw;
+          height: 13vw;
+        }
+      }
+      .TopRightArea{
+        .GenderAge{
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          .charaGenderIcon{
+            width: 20px;
+            height: 20px;
+          }
+        }
+        .charaAge{
+          font-family: "Noto Sans JP";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+    width:10vw;
+    margin:auto;
+
+    color: #000000;
+        }
+        .personality{
+          width:15vw;
+          font-family: 'Inter';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 10px;
+          line-height: 24px;
+          text-align: center;
+          color: #000000;
+        }
+      }
+    }
+    .bottomArea{
+      margin-top:20px;
+      margin-left:15px;
+      display: flex;
+      flex-direction: column;
+      gap:5px;
+      .charaMainText{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        color: #000000;
+        margin:0px;
+      }
+      .charaText{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 10px;
+        line-height: 10px;
+        color: #000000;
+      }
+    }
+  }
+
+
+  .bgimg {
+    width: 100vw;
+    height: 100vh;
+  }
+  .title {
+    position: absolute;
+    width: 80vw;
+    height: 154px;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%, -50%);
+  }
+  .subTitle1 {
+    position: absolute;
+    width: 80vw;
+    height: 48px;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+
+    @include title;
+  }
+  .subTitle2 {
+    position: absolute;
+    height: 48px;
+    width: 80vw;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+
+    @include title;
+  }
+  .waitingButtonWhite {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    height: 6vh;
+    left: 50%;
+    top: 85%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+
+    background: #ffffff;
+    box-shadow: 0px 3px 8px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+  }
+  .buttonArea {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+  .waitingButtonColor {
+    width: 40vw;
+    height: 5vh;
+    background: linear-gradient(91.41deg, #fc923b 0%, #f45d34 100%);
+    box-shadow: 0px 3px 8px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+    border: none;
+    margin: 0 auto;
+
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 39px;
+    text-align: center;
+
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .waitingText {
+    width: 128px;
+    height: 46px;
+
+    font-family: "Noto Sans JP";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 46px;
+    text-align: center;
+
+    background: linear-gradient(97.36deg, #fc923b 0%, #f45d34 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .bgColor {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+    background: linear-gradient(
+      180deg,
+      rgba(252, 146, 59, 0.7) 0%,
+      rgba(244, 93, 52, 0.7) 97.8%
+    );
+    border-radius: 0px;
+  }
+}
+
+
+
+
+
+
+
+
+
 @media (min-width: 1024px) {
   @mixin title {
   font-family: "Inter";
@@ -90,7 +566,15 @@
     background-clip: text;
     text-fill-color: transparent;
   }
-  .roadmapText{
+  .arrowArea{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left:30vw;
+  }
+  .roadmapTextDate{
+    position:absolute;
+    z-index:2;
     font-family: "Noto Sans JP";
     font-style: normal;
     font-weight: 700;
@@ -101,15 +585,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-    background: linear-gradient(97.36deg, #fc923b 0%, #f45d34 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
+    color:white;
   }
 
   .roadmapTextBlack{
+    position:absolute;
+    left:60%;
+    transform: translate(-50%, -50%);
     font-family: "Noto Sans JP";
     font-style: normal;
     font-weight: 700;
@@ -121,16 +603,30 @@
     justify-content: center;
     align-items: center;
     color:rgb(61, 61, 61);
+    text-align: center;
+  }
+  .arrow{
+    position: absolute;
   }
 
-  .roadmapLine {
+  .roadmapArea {
     height: 50px;
     width: 100vw;
-    margin: 5px auto;
-    text-align: center;
+    display: flex;
+    margin-top:20vh;
   }
   .roadmapUnder{
     margin-bottom:10vh;
+  }
+  .roadmapLine{
+    position:absolute;
+    margin-top:55px;
+    left:50%;
+    transform: translate(-50%, -50%);
+width: 60vw;
+height: 5px;
+background: linear-gradient(90deg, #FC923B 0%, #F45D34 100%);
+
   }
   .socialArea {
     width: 60vw;
