@@ -6,7 +6,7 @@ const Registration = () => {
   return (
     <>
       <div className={styles.bgColor} />
-      <button className={styles.returnButton}>
+      <button className={styles.returnButton} onClick={()=>location.href="/"}>
         <Image
           src="/return.svg"
           alt="return"
