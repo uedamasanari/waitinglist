@@ -225,7 +225,7 @@ export default function Home() {
         </div>
       </div>
 
-      <h2 className={styles.h2}>リツイート</h2>
+      <div className={`${styles.h2} ${styles.RT}`}>リツイート</div>
       <h2 className={`${styles.h2} ${styles.bigText}`}>1000</h2>
       <div className={styles.orangeBorder}>
         <div className={styles.orangeFlex}>
@@ -275,30 +275,14 @@ export default function Home() {
 
       <h1 className={styles.h1}>AVATALKとは</h1>
       <div className={styles.h1Under} />
-      <h4 className={styles.h4}>
-        運営とユーザが生み出すオリジナルキャラと音声で会話することができる
-        <br />
-        アプリです。
-        <br />
-        オリジナルキャラはAIなので、あなたが話したいことや悩みなどを
-        <br />
-        なんでも話すことができます。
-        <br />
-        <br />
+      <h4 className={`${styles.h4} ${styles.avatalkText}`}>
+        運営とユーザーが生み出す、人間のようなAIを使ったオリジナルキャラと1対1で音声会話ができるアプリです。
+        オリジナルキャラはAIなので、1対1であなたが話したいことや悩みなどをなんでも話すことができます。<br />
         オリジナルキャラは会話すればするほどあなたのことを記憶していきます。
-        <br />
         あなたの好きなこと、あなたの嫌いなこと、あなたの趣味など、
-        <br />
-        さまざまな会話を楽しみましょう！
-        <br />
-        <br />
-        オリジナルキャラはあなたのことに興味津々です。
-        <br />
-        こちらから会話しなくてもオリジナルキャラの方から会話を振ってきたり、
-        <br />
-        会話の途中であなたに質問したりします。
-        <br />
-        <br />
+        さまざまな会話を楽しみましょう！<br />
+        オリジナルキャラには様々なキャラクターが登場します。
+        あなたの好みのキャラクターを見つけて、様々なタイプの会話を楽しみましょう！<br />
         唯一無二のオリジナルキャラと会話を重ね、日々の生活により彩りを。
       </h4>
       <div className={styles.switchButtonArea}>
@@ -314,8 +298,11 @@ export default function Home() {
       </div>
       {isSwitch === 0 && (
         <>
-          <h2 className={styles.h2}>PV</h2>
-          <video src="" controls></video>
+        <h2 className={styles.h2}>PV</h2>
+          <div className={styles.videoArea}>
+            
+            <video src="" controls className={styles.video}></video>
+          </div>
         </>
       )}
       {isSwitch === 1 && (
@@ -560,9 +547,9 @@ export default function Home() {
       <h4 className={styles.h4}>
         お手数ですが、以下のメールアドレスまでお願いいたします
       </h4>
-      <h4 className={styles.h4}>xxxxxxxxx@gmail.com</h4>
+      <h4 className={styles.h4}>avatalkcompany@gmail.com</h4>
 
-      <h4 className={styles.h4}>© 2023 会社名</h4>
+      <h4 className={styles.h4}>© 2023 AVATALK</h4>
     </div>
   );
 }

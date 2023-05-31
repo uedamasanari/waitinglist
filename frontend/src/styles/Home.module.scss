@@ -46,7 +46,7 @@
     font-style: normal;
     font-weight: 700;
     font-size: 28px;
-    line-height: 43px;
+    line-height: 36px;
     /* ボックスの高さと同一 */
     text-align: center;
 
@@ -79,6 +79,12 @@
     margin-top:3vh;
 
     color: #000000;
+  }
+  .avatalkText{
+    width:90vw;
+    margin:auto;
+    margin-top:5vh;
+    line-height: 40px;
   }
   .link{
     font-family: "Noto Sans JP";
@@ -184,6 +190,7 @@ background: linear-gradient(90deg, #FC923B 0%, #F45D34 100%);
     font-size: 60px;
     line-height: 95px;
     text-align: center;
+    margin-top:3vh;
     margin-bottom:3vh;
   }
   .orangeBorder{
@@ -469,6 +476,15 @@ background: linear-gradient(90deg, #FC923B 0%, #F45D34 100%);
     );
     border-radius: 0px;
   }
+  .videoArea{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .video{
+    width:80vw;
+    height:25vh;
+  }
 }
 
 
@@ -525,7 +541,7 @@ background: linear-gradient(90deg, #FC923B 0%, #F45D34 100%);
     font-style: normal;
     font-weight: 700;
     font-size: 58px;
-    line-height: 93px;
+    line-height: 86px;
     /* ボックスの高さと同一 */
     text-align: center;
 
@@ -555,6 +571,12 @@ background: linear-gradient(90deg, #FC923B 0%, #F45D34 100%);
     text-align: center;
 
     color: #000000;
+  }
+  .avatalkText{
+    width:80vw;
+    margin:auto;
+    margin-top:5vh;
+    line-height: 60px;
   }
   .link{
     font-family: "Noto Sans JP";
@@ -659,7 +681,11 @@ background: linear-gradient(90deg, #FC923B 0%, #F45D34 100%);
     font-size: 100px;
     line-height: 185px;
     text-align: center;
+    margin-top:0;
     margin-bottom:3vh;
+  }
+  .RT{
+    margin-top:3vh;
   }
   .orangeBorder{
     
@@ -921,5 +947,14 @@ background: linear-gradient(90deg, #FC923B 0%, #F45D34 100%);
       rgba(244, 93, 52, 0.7) 97.8%
     );
     border-radius: 0px;
+  }
+  .videoArea{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .video{
+    width:50vw;
+    height:60vh;
   }
 }
