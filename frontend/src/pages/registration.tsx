@@ -64,7 +64,7 @@ const Registration = () => {
         className={styles.returnButton}
         onClick={() => (location.href = "/")}
       >
-        <Image src="/return.svg" alt="return" width={44} height={44} />
+        <Image src="/return.svg" alt="return" width={44} height={44} className={styles.returnImg}/>
       </button>
       <div className={styles.titleArea}>事前登録</div>
       <div className={styles.mailArea}>

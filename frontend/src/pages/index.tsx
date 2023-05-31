@@ -299,7 +299,7 @@ export default function Home() {
         会話の途中であなたに質問したりします。
         <br />
         <br />
-        唯一無二のオリジナルキャラを会話を重ね、日々の生活により彩りを。
+        唯一無二のオリジナルキャラと会話を重ね、日々の生活により彩りを。
       </h4>
       <div className={styles.switchButtonArea}>
         <div className={styles.switchButton} onClick={() => switchTab(0)}>
