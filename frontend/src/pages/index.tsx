@@ -1,23 +1,47 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import axios from "axios";
 import styles from "@/styles/Home.module.scss";
+
+interface Data {
+  info_id:number;
+  info_sum: number;
+  info_twitter: string;
+  info_like: number;
+  info_retweet: number;
+}
 
 export default function Home() {
   const [isSwitch, setIsSwitch] = useState(0);
   const [windowWidth, setWindowWidth] = useState(0);
-
+  const [data, setData] = useState<Data>({
+    info_id:0,
+    info_sum: 0,
+    info_twitter: "",
+    info_like: 0,
+    info_retweet: 0
+  });
   useEffect(() => {
     setWindowWidth(window.innerWidth);
 
     function handleResize() {
       setWindowWidth(window.innerWidth);
     }
-
+    axios
+      .get("https://kyuuri.daa.jp/waitingList/select.php")
+      .then((response) => {
+        console.log(response.data)
+        setData(response.data)
+      })
+      .catch((error) => {
+        console.log(error);
+      });
     window.addEventListener("resize", handleResize);
 
     return () => {
       window.removeEventListener("resize", handleResize);
     };
+    
   }, []);
   const characters = [
     {
@@ -66,14 +90,14 @@ export default function Home() {
       <p className={styles.subTitle2}>
         AIオリジナルキャラと話したい世界へ飛び込もう
       </p>
-      <div className={styles.waitingButtonWhite}>
+      <button className={styles.waitingButtonWhite}>
         <p
           className={styles.waitingText}
           onClick={() => (location.href = "registration")}
         >
           事前登録
         </p>
-      </div>
+      </button>
       {windowWidth > 768 ? (
         <Image
           src="/pcbgimg.svg"
@@ -93,7 +117,7 @@ export default function Home() {
       )}
       <h1 className={styles.h1}>事前登録キャンペーン</h1>
       <div className={styles.h1Under} />
-      <h3 className={styles.h3}>事前登録者限定でトークン〇〇個配布！</h3>
+      <h3 className={styles.h3}>事前登録者限定でトークン15個配布！</h3>
       <h4 className={styles.h4}>
         ※トークンとは？
         <br />
@@ -111,6 +135,11 @@ export default function Home() {
         <br />
         追加で報酬を獲得！
       </h3>
+      <div className={styles.h2}>トークン総数</div>
+      <div className={styles.nowPeople}>
+        <h2 className={styles.h2}>最高</h2>
+        <div className={`${styles.h2} ${styles.bigText}`}>120個</div>
+      </div>
       <div className={styles.buttonArea}>
         <button
           className={styles.waitingButtonColor}
@@ -122,41 +151,41 @@ export default function Home() {
       <div className={styles.h2}>事前登録人数</div>
       <div className={styles.nowPeople}>
         <h2 className={styles.h2}>現在</h2>
-        <div className={`${styles.h2} ${styles.bigText}`}>333人</div>
+        <div className={`${styles.h2} ${styles.bigText}`}>{data.info_sum}人</div>
       </div>
       <div className={styles.orangeBorder}>
         <div className={styles.orangeFlex}>
           <div className={styles.orangeColumn}>
             <div className={styles.orangeArea}>登録者10人</div>
-            <div className={styles.orangeAreaText}>トークン◯個追加</div>
+            <div className={styles.orangeAreaText}>トークン3個追加</div>
           </div>
           <div className={styles.orangeColumn}>
             <div className={styles.orangeArea}>登録者50人</div>
-            <div className={styles.orangeAreaText}>トークン◯個追加</div>
+            <div className={styles.orangeAreaText}>トークン3個追加</div>
           </div>
           <div className={styles.orangeColumn}>
             <div className={styles.orangeArea}>登録者100人</div>
-            <div className={styles.orangeAreaText}>トークン◯個追加</div>
+            <div className={styles.orangeAreaText}>トークン4個追加</div>
           </div>
         </div>
         <div className={styles.orangeFlex}>
           <div className={styles.orangeColumn}>
             <div className={styles.orangeArea}>登録者300人</div>
-            <div className={styles.orangeAreaText}>トークン◯個追加</div>
+            <div className={styles.orangeAreaText}>トークン5個追加</div>
           </div>
           <div className={styles.orangeColumn}>
             <div className={styles.orangeArea}>登録者500人</div>
-            <div className={styles.orangeAreaText}>トークン◯個追加</div>
+            <div className={styles.orangeAreaText}>トークン5個追加</div>
           </div>
           <div className={styles.orangeColumn}>
             <div className={styles.orangeArea}>登録者700人</div>
-            <div className={styles.orangeAreaText}>トークン◯個追加</div>
+            <div className={styles.orangeAreaText}>トークン5個追加</div>
           </div>
         </div>
         <div className={styles.orangeFlex}>
           <div className={styles.orangeColumn}>
             <div className={styles.orangeArea}>登録者1000人</div>
-            <div className={styles.orangeAreaText}>トークン◯個追加</div>
+            <div className={styles.orangeAreaText}>トークン10個追加</div>
           </div>
         </div>
       </div>
@@ -180,86 +209,86 @@ export default function Home() {
         <br />
         <a
           className={styles.link}
-          href="https://twitter.com/ai_talk_app"
+          href={data.info_twitter}
           target="_blank"
         >
           対象ツイートはこちら！
         </a>
       </h3>
       <div className={styles.h2}>いいね</div>
-      <div className={`${styles.h2} ${styles.bigText}`}>1000</div>
+      <div className={`${styles.h2} ${styles.bigText}`}>{data.info_like}</div>
       <div className={styles.orangeBorder}>
         <div className={styles.orangeFlex}>
           <div className={styles.orangeColumn}>
             <div className={styles.orangeArea}>いいね100</div>
-            <div className={styles.orangeAreaText}>トークン◯個追加</div>
+            <div className={styles.orangeAreaText}>トークン3個追加</div>
           </div>
           <div className={styles.orangeColumn}>
             <div className={styles.orangeArea}>いいね300</div>
-            <div className={styles.orangeAreaText}>トークン◯個追加</div>
+            <div className={styles.orangeAreaText}>トークン3個追加</div>
           </div>
           <div className={styles.orangeColumn}>
             <div className={styles.orangeArea}>いいね500</div>
-            <div className={styles.orangeAreaText}>トークン◯個追加</div>
+            <div className={styles.orangeAreaText}>トークン4個追加</div>
           </div>
         </div>
         <div className={styles.orangeFlex}>
           <div className={styles.orangeColumn}>
             <div className={styles.orangeArea}>いいね1000</div>
-            <div className={styles.orangeAreaText}>トークン◯個追加</div>
+            <div className={styles.orangeAreaText}>トークン5個追加</div>
           </div>
           <div className={styles.orangeColumn}>
             <div className={styles.orangeArea}>いいね3000</div>
-            <div className={styles.orangeAreaText}>トークン◯個追加</div>
+            <div className={styles.orangeAreaText}>トークン5個追加</div>
           </div>
           <div className={styles.orangeColumn}>
             <div className={styles.orangeArea}>いいね5000</div>
-            <div className={styles.orangeAreaText}>トークン◯個追加</div>
+            <div className={styles.orangeAreaText}>トークン5個追加</div>
           </div>
         </div>
         <div className={styles.orangeFlex}>
           <div className={styles.orangeColumn}>
             <div className={styles.orangeArea}>いいね10000</div>
-            <div className={styles.orangeAreaText}>トークン◯個追加</div>
+            <div className={styles.orangeAreaText}>トークン10個追加</div>
           </div>
         </div>
       </div>
 
       <div className={`${styles.h2} ${styles.RT}`}>リツイート</div>
-      <h2 className={`${styles.h2} ${styles.bigText}`}>1000</h2>
+      <h2 className={`${styles.h2} ${styles.bigText}`}>{data.info_retweet}</h2>
       <div className={styles.orangeBorder}>
         <div className={styles.orangeFlex}>
           <div className={styles.orangeColumn}>
             <div className={styles.orangeArea}>リツイート100</div>
-            <div className={styles.orangeAreaText}>トークン◯個追加</div>
+            <div className={styles.orangeAreaText}>トークン3個追加</div>
           </div>
           <div className={styles.orangeColumn}>
             <div className={styles.orangeArea}>リツイート300</div>
-            <div className={styles.orangeAreaText}>トークン◯個追加</div>
+            <div className={styles.orangeAreaText}>トークン3個追加</div>
           </div>
           <div className={styles.orangeColumn}>
             <div className={styles.orangeArea}>リツイート500</div>
-            <div className={styles.orangeAreaText}>トークン◯個追加</div>
+            <div className={styles.orangeAreaText}>トークン4個追加</div>
           </div>
         </div>
         <div className={styles.orangeFlex}>
           <div className={styles.orangeColumn}>
             <div className={styles.orangeArea}>リツイート1000</div>
-            <div className={styles.orangeAreaText}>トークン◯個追加</div>
+            <div className={styles.orangeAreaText}>トークン5個追加</div>
           </div>
           <div className={styles.orangeColumn}>
             <div className={styles.orangeArea}>リツイート3000</div>
-            <div className={styles.orangeAreaText}>トークン◯個追加</div>
+            <div className={styles.orangeAreaText}>トークン5個追加</div>
           </div>
           <div className={styles.orangeColumn}>
             <div className={styles.orangeArea}>リツイート5000</div>
-            <div className={styles.orangeAreaText}>トークン◯個追加</div>
+            <div className={styles.orangeAreaText}>トークン5個追加</div>
           </div>
         </div>
         <div className={styles.orangeFlex}>
           <div className={styles.orangeColumn}>
             <div className={styles.orangeArea}>リツイート10000</div>
-            <div className={styles.orangeAreaText}>トークン◯個追加</div>
+            <div className={styles.orangeAreaText}>トークン10個追加</div>
           </div>
         </div>
       </div>
@@ -277,12 +306,15 @@ export default function Home() {
       <div className={styles.h1Under} />
       <h4 className={`${styles.h4} ${styles.avatalkText}`}>
         運営とユーザーが生み出す、人間のようなAIを使ったオリジナルキャラと1対1で音声会話ができるアプリです。
-        オリジナルキャラはAIなので、1対1であなたが話したいことや悩みなどをなんでも話すことができます。<br />
+        オリジナルキャラはAIなので、1対1であなたが話したいことや悩みなどをなんでも話すことができます。
+        <br />
         オリジナルキャラは会話すればするほどあなたのことを記憶していきます。
         あなたの好きなこと、あなたの嫌いなこと、あなたの趣味など、
-        さまざまな会話を楽しみましょう！<br />
+        さまざまな会話を楽しみましょう！
+        <br />
         オリジナルキャラには様々なキャラクターが登場します。
-        あなたの好みのキャラクターを見つけて、様々なタイプの会話を楽しみましょう！<br />
+        あなたの好みのキャラクターを見つけて、様々なタイプの会話を楽しみましょう！
+        <br />
         唯一無二のオリジナルキャラと会話を重ね、日々の生活により彩りを。
       </h4>
       <div className={styles.switchButtonArea}>
@@ -292,16 +324,15 @@ export default function Home() {
         <div className={styles.switchButton} onClick={() => switchTab(1)}>
           キャラクター
         </div>
-        <div className={styles.switchButton} onClick={() => switchTab(2)}>
+        {/* <div className={styles.switchButton} onClick={() => switchTab(2)}>
           遊び方
-        </div>
+        </div> */}
       </div>
       {isSwitch === 0 && (
         <>
-        <h2 className={styles.h2}>PV</h2>
+          <h2 className={styles.h2}>PV</h2>
           <div className={styles.videoArea}>
-            
-            <video src="" controls className={styles.video}></video>
+            <video src="/PV.mp4" controls className={styles.video}></video>
           </div>
         </>
       )}
@@ -360,12 +391,12 @@ export default function Home() {
           </div>
         </>
       )}
-      {isSwitch === 2 && (
+      {/* {isSwitch === 2 && (
         <>
           <h2 className={styles.h2}>遊び方</h2>
           <video src="" controls></video>
         </>
-      )}
+      )} */}
 
       <div className={styles.buttonArea}>
         <button
@@ -518,6 +549,7 @@ export default function Home() {
           width={100}
           height={100}
           className={styles.socialIcon}
+          onClick={() => (location.href = "https://www.tiktok.com/@avatalkcompany?lang=ja-JP")}
         />
         <Image
           src="/twitter.svg"
@@ -525,6 +557,7 @@ export default function Home() {
           width={100}
           height={100}
           className={styles.socialIcon}
+          onClick={() => (location.href = "https://twitter.com/ava_talk74935")}
         />
         <Image
           src="/instagram.svg"
@@ -532,6 +565,7 @@ export default function Home() {
           width={100}
           height={100}
           className={styles.socialIcon}
+          onClick={() => (location.href = "https://www.instagram.com/avatalkcompany/")}
         />
         <Image
           src="/youtube.svg"

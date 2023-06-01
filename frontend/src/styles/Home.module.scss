@@ -193,6 +193,9 @@ background: linear-gradient(90deg, #FC923B 0%, #F45D34 100%);
     margin-top:3vh;
     margin-bottom:3vh;
   }
+  .RT{
+    margin-top:3vh;
+  }
   .orangeBorder{
     border: 5px solid #fc923b;
     border-radius:30px;
@@ -419,6 +422,8 @@ background: linear-gradient(90deg, #FC923B 0%, #F45D34 100%);
     background: #ffffff;
     box-shadow: 0px 3px 8px 2px rgba(0, 0, 0, 0.25);
     border-radius: 40px;
+
+    border:none;
   }
   .buttonArea {
     text-align: center;
@@ -483,7 +488,7 @@ background: linear-gradient(90deg, #FC923B 0%, #F45D34 100%);
   }
   .video{
     width:80vw;
-    height:25vh;
+    height:40vh;
   }
 }
 
@@ -893,6 +898,8 @@ background: linear-gradient(90deg, #FC923B 0%, #F45D34 100%);
     background: #ffffff;
     box-shadow: 0px 3px 8px 2px rgba(0, 0, 0, 0.25);
     border-radius: 40px;
+
+    border:none;
   }
   .buttonArea {
     text-align: center;

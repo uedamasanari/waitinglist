@@ -91,11 +91,11 @@ const Registration = () => {
         value={data.waiting_text}
         onChange={(e) => setData({ ...data, waiting_text: e.target.value })}
       />
-      <div className={styles.waitingButtonWhite}>
+      <button className={styles.waitingButtonWhite}>
         <p className={styles.waitingText} onClick={() => insertData()}>
           事前登録
         </p>
-      </div>
+      </button>
       {windowWidth > 768 ? (
         <Image
           src="/pcbgimg.svg"
