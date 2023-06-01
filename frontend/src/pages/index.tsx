@@ -209,7 +209,7 @@ export default function Home() {
         <br />
         <a
           className={styles.link}
-          href={data.info_twitter}
+          href="https://twitter.com/ava_talk74935/status/1664225281052413953?s=20"
           target="_blank"
         >
           対象ツイートはこちら！
